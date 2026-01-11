@@ -1,0 +1,19 @@
+project_name: "Neuro-Adaptive Vision Prototype"
+version: "0.1.0-alpha"
+
+model:
+  type: "neuromorphic_snn"
+  layers: 5
+  input_channels: 2
+  hidden_dim: 128
+  activation: "leaky_integrate_and_fire"
+
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  epochs: 50
+  optimizer: "adam"
+
+data:
+  source_path: "./data/raw"
+  validation_split: 0.2

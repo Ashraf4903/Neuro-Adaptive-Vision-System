@@ -1,22 +1,62 @@
-# Neuro-Adaptive Vision System
+# Neuro-Adaptive Vision Architecture
 
-##  Overview
-A modular, event-based computer vision architecture designed to handle [specific problem, e.g., high-speed motion detection] using [specific technique, e.g., Spiking Neural Networks].
+**Status:** `Structural Prototype` | **Version:** `0.1.0-alpha`
 
-**Note:** This repository currently represents the **architectural prototype**. It contains the complete structural logic, type hinting, and configuration management, serving as a blueprint for the forthcoming implementation.
+## 📋 Overview
+This repository hosts the architectural blueprint for a **Neuro-Adaptive Vision System**. It is designed to process event-based data streams using Spiking Neural Network (SNN) principles. The current codebase implements the structural logic, configuration management, and modular factory patterns required for scalability.
 
-##  Architecture
-- **Data Ingestion:** Asynchronous loading pipeline for event-based data streams.
-- **Model Core:** Interface for swappable backends (PyTorch / Loihi).
-- **Configuration:** YAML-based hyperparameter tuning.
+## 📄 Project Proposal
+This repository is based on the research and objectives outlined in our formal proposal.
+[**View the Project Proposal (PDF)**](./docs/Project_Proposal.pdf)
 
-##  Project Structure
-- `src/model_factory.py`: Defines the abstract base classes for model initialization.
-- `src/trainer.py`: Orchestrates the training loops with checkpointing support.
-- `configs/`: Centralized configuration management.
+## 🏗️ System Architecture
+The project follows a modular design pattern:
+- **`src/data_loader.py`**: Handles asynchronous ingestion of event streams.
+- **`src/model_factory.py`**: Implements an Abstract Base Class (ABC) pattern for flexible model swapping.
+- **`configs/model_config.yaml`**: Centralized hyperparameter and environment management.
 
-##  Installation
-git clone [https://github.com/yourusername/neuro-adaptive-vision.git](https://github.com/yourusername/neuro-adaptive-vision.git)
-cd neuro-adaptive-vision
-pip install -r requirements.txt
-python main.py --mode structural_check
+
+## 🚀 Usage (Prototype Check)
+To verify the structural integrity of the application:
+
+1. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+
+2. Run Structural Analysis
+
+
+   python main.py
+
+## Tech Stack Intent
+    Core: Python 3.9+
+
+    DL Framework: PyTorch / Snntorch
+
+    Config: YAML
+
+    Logging: Native Python Logging
+
+## Future Roadmap
+Implementation of LIF (Leaky Integrate-and-Fire) neurons in model_factory.
+
+Integration with real-time DVS (Dynamic Vision Sensor) inputs.
+
+
+---
+
+### **How to Run It**
+Once you have created all these files, simply open your terminal in the main folder and run:
+ 'python main.py'
+
+## Project Structure
+
+neuro-adaptive-vision/
+├── configs/
+├── data/
+├── docs/                      
+│   └── Project_Proposal.pdf   <-- Proposal File
+├── src/
+├── main.py
+├── README.md
+└── requirements.txt
