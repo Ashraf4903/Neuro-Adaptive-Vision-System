@@ -51,12 +51,17 @@ Once you have created all these files, simply open your terminal in the main fol
 
 ## Project Structure
 
+```text
 neuro-adaptive-vision/
-├── configs/
-├── data/
-├── docs/                      
-│   └── Project_Proposal.pdf   <-- Proposal File
-├── src/
-├── main.py
-├── README.md
-└── requirements.txt
+├── configs/               # Hyperparameters and model settings
+├── data/                  # Data storage (Raw & Processed)
+├── docs/                  # Documentation
+│   └── Project_Proposal.pdf  <-- Project Proposal
+├── src/                   # Source code
+│   ├── data_loader.py
+│   ├── model_factory.py
+│   ├── trainer.py
+│   └── utils.py
+├── main.py                # Main entry point script
+├── README.md              # Project documentation
+└── requirements.txt       # List of dependencies
